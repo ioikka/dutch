@@ -10,6 +10,12 @@
         .hidden { display: none; }
         .timer { font-weight: bold; color: red; }
     </style>
+    <script>
+        if (performance.navigation.type === 1) {
+            document.body.innerHTML = '<h1>Refreshing is not allowed!</h1>';
+            throw new Error("Page refresh detected");
+        }
+    </script>
 </head>
 <body>
     <h1>A2 Dutch Test</h1>
